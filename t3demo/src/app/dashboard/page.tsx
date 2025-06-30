@@ -1,5 +1,5 @@
 "use server";
-import { redirect } from "next/navigation";
+import Link from "next/link";
 import React from "react";
 import DashboardClient from "~/components/dashboard-client";
 import { auth } from "~/server/auth";
@@ -9,7 +9,11 @@ const DashboardPage = async () => {
   const session = await auth();
 
   if (!session) {
-    redirect("login");
+    return (
+      <div className="">
+        OPS! please login again <Link href={"/login"}>Login</Link>
+      </div>
+    );
   }
 
   const userData = await db.user.findUniqueOrThrow({

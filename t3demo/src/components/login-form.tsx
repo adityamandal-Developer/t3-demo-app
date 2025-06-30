@@ -56,6 +56,11 @@ export function LoginForm({
     }
   };
 
+  const handleGoogleAuth = () => {
+    toast.error("We are having issues with google auth please login manually", {
+      position: "top-center",
+    });
+  };
   return (
     <form
       className={cn("flex flex-col gap-6", className)}
@@ -113,7 +118,7 @@ export function LoginForm({
             Or continue with
           </span>
         </div>
-        <Button variant="outline" className="w-full">
+        <Button variant="outline" className="w-full" onClick={handleGoogleAuth}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
