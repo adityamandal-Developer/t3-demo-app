@@ -1,10 +1,8 @@
 "use server";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import AppLogo from "~/components/app-logo";
 
 import { SignupForm } from "~/components/signup-form";
-import { auth } from "~/server/auth";
 import {
   Zap,
   Play,
