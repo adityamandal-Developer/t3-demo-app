@@ -40,7 +40,7 @@ export async function createCheckoutSession(priceId: PriceId) {
     line_items: [{ price: PRICE_IDS[priceId], quantity: 1 }],
     customer: user.stripCustomId,
     mode: "payment",
-    success_url: `${env.BASE_URL}/dashboard?success=true"}`,
+    success_url: `${env.BASE_URL}/dashboard?success=true`,
   });
 
   if (!session.url) {
