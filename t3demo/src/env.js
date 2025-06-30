@@ -11,12 +11,27 @@ export const env = createEnv({
       process.env.NODE_ENV === "production"
         ? z.string()
         : z.string().optional(),
-    AUTH_DISCORD_ID: z.string(),
-    AUTH_DISCORD_SECRET: z.string(),
     DATABASE_URL: z.string().url(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
+    AWS_ACCESS_KEY_ID: z.string(),
+    AWS_SECRET_ACCESS_KEY: z.string(),
+    S3_BUCKET_NAME: z.string(),
+    AWS_REGION: z.string(),
+
+    PROCESS_VIDEO_ENDPOINT: z.string(),
+    PROCESS_VIDEO_ENDPOINT_AUTH: z.string(),
+
+    STRIPE_SECRECT_KEY: z.string(),
+
+    STRIPE_STARTER_CREDITS_PACK: z.string(),
+    STRIPE_PRO_CREDITS_PACK: z.string(),
+    STRIPE_AGENCY_CREDITS_PACK: z.string(),
+
+    BASE_URL: z.string(),
+    STRIPE_WEBHOOK_SECRECT: z.string(),
+    STRIPE_SIGNING_SECRECT: z.string(),
   },
 
   /**
@@ -25,7 +40,7 @@ export const env = createEnv({
    * `NEXT_PUBLIC_`.
    */
   client: {
-    // NEXT_PUBLIC_CLIENTVAR: z.string(),
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string()
   },
 
   /**
@@ -34,11 +49,29 @@ export const env = createEnv({
    */
   runtimeEnv: {
     AUTH_SECRET: process.env.AUTH_SECRET,
-    AUTH_DISCORD_ID: process.env.AUTH_DISCORD_ID,
-    AUTH_DISCORD_SECRET: process.env.AUTH_DISCORD_SECRET,
     DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
+
+    AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
+    AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
+    S3_BUCKET_NAME: process.env.S3_BUCKET_NAME,
+    AWS_REGION: process.env.AWS_REGION,
+
+    PROCESS_VIDEO_ENDPOINT: process.env.PROCESS_VIDEO_ENDPOINT,
+    PROCESS_VIDEO_ENDPOINT_AUTH: process.env.PROCESS_VIDEO_ENDPOINT_AUTH,
+
+    STRIPE_SECRECT_KEY: process.env.STRIPE_SECRECT_KEY,
+
+    STRIPE_STARTER_CREDITS_PACK: process.env.STRIPE_STARTER_CREDITS_PACK,
+    STRIPE_PRO_CREDITS_PACK: process.env.STRIPE_PRO_CREDITS_PACK,
+    STRIPE_AGENCY_CREDITS_PACK: process.env.STRIPE_AGENCY_CREDITS_PACK,
+
+    BASE_URL: process.env.BASE_URL,
+    STRIPE_WEBHOOK_SECRECT: process.env.STRIPE_WEBHOOK_SECRECT,
+    STRIPE_SIGNING_SECRECT: process.env.STRIPE_SIGNING_SECRECT,
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
   },
+
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
    * useful for Docker builds.
@@ -49,4 +82,5 @@ export const env = createEnv({
    * `SOME_VAR=''` will throw an error.
    */
   emptyStringAsUndefined: true,
+
 });
