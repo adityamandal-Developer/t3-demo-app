@@ -8,7 +8,9 @@ const AppLogo = () => {
         </div>
         <div className="bg-chart-2 absolute -top-1 -right-1 h-4 w-4 animate-ping rounded-full" />
       </div>
-      <span className="text-foreground text-2xl font-bold">PodClip AI</span>
+      <span className="sm:bloack text-foreground hidden text-2xl font-bold">
+        PodClip AI
+      </span>
     </div>
   );
 };

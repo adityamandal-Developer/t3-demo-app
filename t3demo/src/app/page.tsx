@@ -57,7 +57,7 @@ const PodcastClipperLanding = () => {
   ];
 
   const stats = [
-    { number: "10K+", label: "Clips Generated" },
+    { number: "100+", label: "Clips Generated" },
     { number: "95%", label: "Accuracy Rate" },
     { number: "5min", label: "Processing Time" },
   ];
@@ -99,8 +99,8 @@ const PodcastClipperLanding = () => {
 
       {/* Hero Section */}
       <section className="relative z-10 px-6 py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="mx-auto max-w-5xl sm:max-w-7xl">
+          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
             <div
               className={`space-y-8 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
             >
@@ -118,15 +118,15 @@ const PodcastClipperLanding = () => {
                 Into Viral Clips
               </h1>
 
-              <p className="text-muted-foreground max-w-lg text-xl leading-relaxed">
+              <p className="text-muted-foreground max-w-md text-xl leading-relaxed text-wrap sm:max-w-lg">
                 Our AI analyzes your podcast content and automatically generates
                 engaging clips that capture your best moments and drive audience
                 growth.
               </p>
 
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Link href={"/dashboard"}>
-                  <button className="group bg-primary text-primary-foreground hover:bg-primary/90 flex items-center space-x-2 rounded-xl px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <Link href={"/dashboard"} className="w-full">
+                  <button className="group bg-primary text-primary-foreground hover:bg-primary/90 flex w-full items-center space-x-2 rounded-xl px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <span>Start Clipping Now</span>
                     <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </button>
