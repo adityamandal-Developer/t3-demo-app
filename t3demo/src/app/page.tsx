@@ -125,7 +125,7 @@ const PodcastClipperLanding = () => {
               </p>
 
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Link href={"/dashboard"} className="w-full">
+                <Link href={"/dashboard"} className="w-full sm:w-auto">
                   <button className="group bg-primary text-primary-foreground hover:bg-primary/90 flex w-full items-center space-x-2 rounded-xl px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <span>Start Clipping Now</span>
                     <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
