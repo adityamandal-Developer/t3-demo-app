@@ -89,7 +89,7 @@ const PodcastClipperLanding = () => {
         <nav className="mx-auto flex max-w-7xl items-center justify-between">
           <AppLogo />
 
-          <Link href={"/dashboard"}>
+          <Link href={"/login"}>
             <button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl px-6 py-2 transition-all duration-300 hover:scale-105 hover:shadow-lg">
               Get Started
             </button>
