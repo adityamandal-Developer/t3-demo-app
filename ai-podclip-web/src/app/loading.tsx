@@ -6,7 +6,7 @@ const Loading = () => {
     <div className="flex h-screen flex-col items-center justify-center gap-4">
       <AppLogo />
       <div className="flex gap-2">
-        <h3> Loading</h3> <LoaderCircle className="animate-spin" />
+        <h3>Loading</h3> <LoaderCircle className="animate-spin" />
       </div>
     </div>
   );
